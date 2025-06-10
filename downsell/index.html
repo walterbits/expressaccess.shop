@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Downsell – TGD</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .banner {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .banner img {
+      max-width: 100%;
+      height: auto;
+    }
+    .progress-container {
+      background-color: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 20px auto;
+      width: 95%;
+      max-width: 600px;
+    }
+    .progress-bar {
+      height: 25px;
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+    }
+    .progress-fill {
+      background-color: #13FF00;
+      height: 100%;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 5px;
+      color: #000;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+    }
+    .heading {
+      color: #2FF8DB;
+      font-size: 27px;
+      margin: 20px 0;
+    }
+    .oferta {
+      font-size: 23px;
+      margin: 10px 0;
+    }
+    .oferta u {
+      color: #00ff00;
+      font-size: 28px;
+    }
+    .preco-antigo {
+      text-decoration: line-through;
+      color: #ff0000;
+    }
+    .selo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+    }
+    .selo img {
+      max-width: 200px;
+      height: auto;
+    }
+       button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #28a745; /* Verde forte */
+  color: #fff; /* Texto branco */
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px; /* Deixa o botão bem arredondado */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  animation: pulse 1.5s infinite;
+}
+    button:hover {
+      opacity: 0.9;
+    }
+    /* Esconde o seletor de parcelas */
+    select[payt_element='installment'] {
+      display: none;
+    }
+    .link-negado {
+      color: #999;
+      margin-top: 10px;
+      display: block;
+      font-size: 16px;
+    }
+    H0px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <p style="font-size: 21px;"><strong>PROCESSANDO SUA COMPRA</strong></p>
+  <div class="progress-container">
+    <div class="progress-bar">
+      <div class="progress-fill">
+        <span>PROCESSANDO...</span>
+        <span style="margin-right: 10px;">95%</span>
+      </div>
+    </div>
+  </div>
+
+ <div style="text-align: center; margin: 30px 0;">
+  <img src="imagens/banner.png" alt="banner"
+       style="max-width: 750px; width: 100%; height: auto; display: inline-block;">
+</div>
+
+  <h2 class="heading">Eu não quero que o preço seja um impeditivo para você ter acesso a todas as mulheres que deseja aos seus pés.</h2>
+
+  <div class="oferta">
+    <p>Apenas agora nessa página aproveite a oportunidade de adquirir o acesso com <u>43% de desconto!</u></p>
+    <p class="preco-antigo">De: R$ 47,00</p>
+    <p><u>Por: R$ 27,00</u></p>
+  </div>
+<br><br><br>
+
+<div class="img-flex">
+  <img src="imagens/ebook.png" style="max-width: 400px;">
+  <img src="imagens/selo.png" style="max-width: 200px;">
+</div>
+<br><br><br>
+
+<!-- Botão One Click Payt -->
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="#" payt_action="oneclick_buy" data-object="LQ2ADR-RBYN7O">
+        <button>Sim, adicionar ao meu pedido</button>
+      </a>
+    </div>
+    <script type="text/javascript" src="https://checkout.payt.com.br/multiple-oneclickbuyscript/L9JGNR.js"></script>
+
+    <p style="text-align: center;">
+      <a href="https://expressaccess.shop/obrigado">
+        <span style="color: #999999;"><u>Não, eu não quero essa oferta</u></span>
+      </a>
+    </p>
+
+
+  <div class="footer">
+    <br><br><br><br><br><br><br><br><br>
+    <p><em>Mulher aos Seus pés - Todos os Direitos Reservados ®</em></p>
+  </div>
+
+
+
+</body>
+</html>
