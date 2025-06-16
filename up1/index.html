@@ -31,7 +31,7 @@
       color: #000;
     }
     .progress-bar {
-      width: 70%;
+      width: 90%;
       height: 100%;
       background-color: #13FF00;
       display: flex;
@@ -53,7 +53,7 @@
   font-size: 18px;
   font-weight: bold;
   border: none;
-  border-radius: 50px; /* Deixa o botão bem arredondado */
+  border-radius: 70px; /* Deixa o botão bem arredondado */
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -77,7 +77,7 @@
     <div class="progress-container">
       <div class="progress-bar">
         <span>Processando...</span>
-        <span>75%</span>
+        <span>90%</span>
       </div>
     </div>
 
@@ -86,45 +86,66 @@
        style="max-width: 750px; width: 100%; height: auto; display: inline-block;">
 </div>
 
+         <script>
+  // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+  const link = 'https://expressaccess.shop/downsell';
 
+  function setBackRedirect(url) {
+    let urlBackRedirect = url;
+    urlBackRedirect = urlBackRedirect =
+      urlBackRedirect.trim() +
+      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+      document.location.search.replace('?', '').toString();
 
-<p style="text-align: center;">
-  <span style="color: #ffffff;">Você só verá esse vídeo apenas </span>
-  <span style="color: #ff0000;"><strong>UMA VEZ</strong></span>,
-  <span style="color: #ffffff;">então preste atenção! É muito importante!</span>
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.addEventListener('popstate', () => {
+      console.log('onpopstate', urlBackRedirect);
+      setTimeout(() => {
+        location.href = urlBackRedirect;
+      }, 1);
+    });
+  }
+
+  setBackRedirect(link);
+</script>
+
+<!-----(center) Centraliza -- (font-size) Aumenta o tamanho da letra. -- (line-height) Aumenta o espaçamento das frases -->
+
+<p style="text-align: center; font-size: 18px; line-height: 1.8;">
+  <span style="color: #ffffff;">Antes de finalizarmos, você </span>
+  <span style="color: #d70107;"><strong>PRECISA</strong></span>
+  <span style="color: #ffffff;"> assistir à</span>
+  <span style="color: #d70107;"><strong>PRIMEIRA AULA</strong></span>
+  <span style="color: #ffffff;">abaixo 👇 <br> É a mais importante de todas.</span>
 </p>
 
 
     <!-- Player VTurb -->
-    <div id="vid_6843e9747ab5ebd4ece40a1f" style="position: relative; width: 100%; padding: 56.074766355140184% 0 0;">
-      <img id="thumb_6843e9747ab5ebd4ece40a1f" src="https://images.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6843e9747ab5ebd4ece40a1f/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail">
-      <div id="backdrop_6843e9747ab5ebd4ece40a1f" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%;"></div>
-    </div>
-    <script type="text/javascript" id="scr_6843e9747ab5ebd4ece40a1f">
-      setTimeout(function() {
-        var s = document.createElement("script");
-        s.src = "https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6843e9747ab5ebd4ece40a1f/player.js";
-        s.async = true;
-        document.head.appendChild(s);
-      }, 500);
-    </script>
+<div id="vid_6843e9747ab5ebd4ece40a1f" style="position: relative; width: 100%; padding: 56.074766355140184% 0 0;"> <img id="thumb_6843e9747ab5ebd4ece40a1f" src="https://images.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6843e9747ab5ebd4ece40a1f/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail"> <div id="backdrop_6843e9747ab5ebd4ece40a1f" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div> </div> <script type="text/javascript" id="scr_6843e9747ab5ebd4ece40a1f"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6843e9747ab5ebd4ece40a1f/player.js", s.async=!0,document.head.appendChild(s); </script>
 
-  <!-- Botão One Click Payt -->
+
+  <!-- Botão One Click Payt 
     <div style="text-align: center; margin-top: 30px;">
       <a href="#" payt_action="oneclick_buy" data-object="LQ23DR-RBYN7O">
         <button>Sim, adicionar ao meu pedido</button>
       </a>
     </div>
     <script type="text/javascript" src="https://checkout.payt.com.br/multiple-oneclickbuyscript/L9JGNR.js"></script>
+    -->
 
+
+    <!-- DownSell
     <p style="text-align: center;">
-      <a href="https://expressaccess.shop/downsell">
+      <a href="https://expressaccess.shop/downsell1">
         <span style="color: #999999;"><u>Não, eu não quero essa oferta</u></span>
       </a>
     </p>
+        -->
 
     <!-- Rodapé com direitos -->
-
 
     <p style="text-align: center; margin-top: 300px">
       <em><span style="color: #ffffff;">Homem Alfa - Todos os Direitos Reservados </span></em>
