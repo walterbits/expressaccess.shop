@@ -171,33 +171,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <div class="esconder">
-
-<div class="text-center mb-4">
-    <a class="main-btn" href="#" payt_action="oneclick_buy" data-object="LYW6W4-RVBYEG">Obter Acesso!</a>
-</div>
-
-<script type="text/javascript" src="https://checkout.payt.com.br/multiple-oneclickbuyscript/L9JGNR.js"></script>
-
-<br>
-    <br>
-
-<select payt_element='installment' data-object='LYW6W4-RVBYEG'></select>
-
-</div>
-
+    <div class="text-center mb-4">
+        <!-- ✅ BOTÃO COM LINK DIRETO DA PERFECTPAY -->
+        <a class="main-btn" href="https://checkout.perfectpay.com.br/pay/PPU38CQ38K6?upsell=true" target="_blank">
+            Obter Acesso!
+        </a>
     </div>
+    
+    <br>
 </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<style>.esonder { display: none }</style>
+<style>.esconder { display: none }</style>
 
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {
-/* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
-    var SECONDS_TO_DISPLAY = 190;
+    var SECONDS_TO_DISPLAY = 190; // Aparece após 3min 10seg
     var CLASS_TO_DISPLAY = ".esconder";
-/* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
     var EXPIRATION_DAYS = 14;
     var alreadyDisplayedKey = "alreadyElsDisplayed" + SECONDS_TO_DISPLAY;
     var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
