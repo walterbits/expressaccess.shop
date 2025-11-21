@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens que Atraem - Conquiste Qualquer Mulher</title>
+    <style>
+        /* ========================================
+           SISTEMA DE CORES - PALETA UNIFICADA
+           ======================================== */
+        :root {
+            /* VERMELHOS (apenas 2) */
+            --vermelho: #ff4444;
+            --vermelho-gradiente: #c41e3a;
+            
+            /* VERDE (apenas 1) */
+            --verde: #10e513;
+            
+            /* FUNDOS ESCUROS (apenas 2) */
+            --bg-preto: #0a0a0a;
+            --bg-escuro: #1a0000;
+            
+            /* TEXTOS CLAROS (apenas 3) */
+            --branco: #ffffff;
+            --cinza-claro: #cccccc;
+            --cinza-medio: #888888;
+            
+            /* ACENTO ESPECIAL */
+            --dourado: #ffd700;
+            
+            /* GRADIENTES PRÉ-DEFINIDOS */
+            --gradient-vermelho: linear-gradient(135deg, var(--vermelho), var(--vermelho-gradiente));
+            --gradient-verde: linear-gradient(135deg, var(--verde), #0bcc0f);
+            --gradient-preto: linear-gradient(180deg, var(--bg-preto), var(--bg-escuro));
+        }
+
+        /* ========================================
+           RESET E CONFIGURAÇÕES GLOBAIS
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a0a; /* Fundo preto */
+            color: #ffffff; /* Texto branco */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ========================================
+           SEÇÃO 1: HERO (TOPO DA PÁGINA)
+           ======================================== */
+        
+        /* Container principal do hero - ocupa tela inteira */
+        .hero-section {
+            background: linear-gradient(180deg, #1a0000 0%, #0a0a0a 100%);
+            padding: 0;
+            border-bottom: 3px solid #ff4444; /* Borda vermelha */
+            min-height: 100vh; /* Altura mínima de 100% da viewport */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Faixa vermelha no topo com oferta */
+        .top-banner {
+            background: linear-gradient(135deg, #ff4444, #c41e3a); /* Gradiente vermelho */
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.6);
+        }
+
+        /* Conteúdo principal do hero - centralizado */
+        .hero-main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            display: block;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Área da headline e subheadline */
+        .hero-left {
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+
+        /* Área da imagem */
+        .hero-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        /* Título principal (headline) */
+        .headline {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        /* Subtítulo (subheadline) */
+        .subheadline {
+            font-size: 1.5em;
+            color: #ff4444; /* Rosa/vermelho claro */
+            margin-bottom: 0;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Container da imagem principal */
+        .hero-image {
+            width: 100%;
+            max-width: 850px;
+            height: auto;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Seção do preço e botão CTA */
+        .hero-cta-section {
+            text-align: center;
+            margin-top: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Box do preço */
+        .price-box {
+            background: transparent;
+            border: none;
+            border-radius: 1px;
+            padding: 1px;
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+        }
+
+        /* Preço antigo (riscado em vermelho) */
+        .old-price {
+            text-decoration: line-through;
+            text-decoration-color: #ff4444;
+            text-decoration-thickness: 1px;
+            color: #ff4444; /* Vermelho */
+            font-size: 1.8em;
+            margin-bottom: 1px;
+            text-align: center;
+        }
+
+        /* Preço atual (verde destaque) */
+        .current-price {
+            font-size: 5em;
+            color: #10e513; /* Verde vibrante */
+            font-weight: bold;
+            margin: 15px 0;
+            text-shadow: 0 0 20px rgba(16, 229, 19, 0.5);
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* Texto de urgência abaixo do preço */
+        .price-info {
+            color: #10e513; /* Verde */
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* Botão de Call-to-Action (CTA) */
+        .cta-button {
+            background: linear-gradient(135deg, #10e513, #10e513); /* Gradiente verde */
+            color: #000; /* Texto preto */
+            padding: 15px 50px; /* Altura reduzida */
+            font-size: 1.3em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 10px auto;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(16, 229, 19, 0.4);
+            text-decoration: none;
+            max-width: 450px;
+            width: auto;
+        }
+
+        /* Efeito hover do botão */
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 229, 19, 0.6);
+            background: linear-gradient(135deg, #10e513, #10e513);
+        }
+
+
+        /* ========================================
+           SEÇÃO 1.5: DOR E PROBLEMA (Nova)
+           ======================================== */
+        
+        .pain-section {
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a0000 100%);
+            padding: 60px 20px; /* Reduzido de 80px para 60px */
+            border-top: 2px solid #ff4444;
+            border-bottom: 2px solid #ff4444;
+        }
+
+        .pain-title {
+            font-size: 2.8em;
+            text-align: center;
+            color: #ff4444;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .pain-subtitle {
+            font-size: 1.5em;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 40px; /* Reduzido de 50px para 40px */
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Container em grid - imagem à esquerda, lista à direita */
+        .pain-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 colunas iguais */
+            gap: 60px;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Coluna da imagem */
+        .pain-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px; /* Empurra a imagem para baixo */
+        }
+
+        .pain-image-box {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.3);
+        }
+
+        .pain-image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Coluna da lista */
+        .pain-list {
+            padding-left: 0;
+        }
+
+        /* Item individual da lista */
+        .pain-list-item {
+            list-style: none;
+            margin-bottom: 18px; /* Reduzido de 30px para 18px */
+            padding: 15px 20px; /* Reduzido de 25px para 15px 20px */
+            background: transparent;
+            border-left: 4px solid #ff4444;
+            transition: all 0.3s ease;
+        }
+
+        .pain-list-item:hover {
+            background: rgba(255, 0, 0, 0.05);
+            border-left-width: 6px;
+            padding-left: 25px; /* Ajustado de 30px para 25px */
+        }
+
+        /* Wrapper do ícone e título */
+        .pain-item-header {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Reduzido de 15px para 12px */
+            margin-bottom: 8px; /* Reduzido de 10px para 8px */
+        }
+
+        /* Ícone emoji */
+        .pain-item-icon {
+            font-size: 1.8em; /* Reduzido de 2em para 1.8em */
+            flex-shrink: 0;
+        }
+
+        /* Título de cada dor */
+        .pain-item-title {
+            font-size: 1.25em; /* Reduzido de 1.4em para 1.25em */
+            color: #ff4444;
+            margin: 0;
+            font-weight: bold;
+            line-height: 1.3; /* Adicionado para controlar altura */
+        }
+
+        /* Descrição de cada dor */
+        .pain-item-text {
+            color: #cccccc;
+            font-size: 1em; /* Reduzido de 1.05em para 1em */
+            line-height: 1.5; /* Reduzido de 1.6 para 1.5 */
+            padding-left: 50px; /* Ajustado de 55px para 50px */
+            margin: 0; /* Remove margem padrão do parágrafo */
+        }
+
+        /* ========================================
+           SEÇÃO 1.6: MECANISMO/SOLUÇÃO (Nova)
+           ======================================== */
+        
+        .mechanism-section {
+            background: #ffffff;
+            padding: 60px 20px;
+            color: #0a0a0a;
+        }
+
+        .mechanism-title {
+            font-size: 2.8em;
+            text-align: center;
+            color: #ff4444;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .mechanism-subtitle {
+            font-size: 1.3em;
+            text-align: center;
+            color: #000000;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Container em grid - 2 colunas */
+        .mechanism-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 50% texto, 50% lista */
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        /* Coluna esquerda - Texto longo */
+        .mechanism-text-column {
+            padding-right: 20px;
+        }
+
+        .mechanism-text-long {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .mechanism-text-long strong {
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        .mechanism-highlight-text {
+            color: #10e513;
+            font-weight: bold;
+        }
+
+        /* Coluna direita - Lista */
+        .mechanism-list-column {
+            background: linear-gradient(135deg, #1a0000, #2a0000);
+            border: 3px solid #ff4444;
+            border-radius: 20px;
+            padding: 40px 35px;
+        }
+
+        .mechanism-list-title {
+            font-size: 1.6em;
+            color: #10e513;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .mechanism-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mechanism-list li {
+            padding: 15px 0;
+            font-size: 1.1em;
+            color: #ffffff;
+            border-bottom: 1px solid #444;
+            line-height: 1.6;
+        }
+
+        .mechanism-list li:last-child {
+            border-bottom: none;
+        }
+
+        .mechanism-list li:before {
+            content: "✓ ";
+            color: #10e513;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+
+        /* CTA Box abaixo de tudo */
+        .mechanism-cta-box {
+            background: #10e513;
+            color: #0a0a0a;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .mechanism-cta-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* ========================================
+           SEÇÃO 1.7: URGÊNCIA (Nova)
+           ======================================== */
+        
+        .urgency-section {
+            background: linear-gradient(135deg, #ff4444, #c41e3a);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .urgency-title {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .urgency-text {
+            font-size: 1.3em;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .urgency-highlight {
+            color: #10e513;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .urgency-countdown {
+            background: #0a0a0a;
+            border: 3px solid #10e513;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .urgency-timer {
+            font-size: 3em;
+            color: #10e513;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 0 0 20px rgba(16, 229, 19, 0.8);
+        }
+        /* ========================================
+           SEÇÃO 2: BENEFÍCIOS
+           ======================================== */
+        
+        .benefits-section {
+            background: #0a0a0a; /* Fundo preto puro */
+            padding: 80px 20px;
+        }
+
+        /* Container em grid - imagem à esquerda, lista à direita */
+        .benefits-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 colunas iguais */
+            gap: 60px;
+            align-items: flex-start; /* Alinha no topo */
+            margin-top: 50px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Coluna da imagem */
+        .benefits-image {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 60px; /* Espaço no topo */
+        }
+
+        .benefits-image-box {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .benefits-image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+            box-shadow: none;
+        }
+
+        /* Coluna da lista de benefícios */
+        .benefits-list {
+            padding-left: 0;
+            padding-top: 0;
+        }
+
+        /* Item individual da lista */
+        .benefits-list-item {
+            list-style: none;
+            margin-bottom: 25px;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Wrapper que agrupa check + título na mesma linha */
+        .benefit-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        /* Ícone de check (✓) */
+        .benefit-item-icon {
+            font-size: 1.5em;
+            color: #ffffff; /* Branco */
+            flex-shrink: 0;
+        }
+
+        .benefit-item-icon::before {
+            content: "✓";
+        }
+
+        /* Título de cada benefício */
+        .benefit-item-title {
+            font-size: 1.3em;
+            color: #ff4444; /* Rosa/vermelho */
+            margin: 0;
+            font-weight: bold;
+        }
+
+        /* Descrição de cada benefício */
+        .benefit-item-description {
+            color: #ffffff; /* Branco */
+            font-size: 1em;
+            line-height: 1.5;
+            padding-left: 40px; /* Alinha com o texto acima */
+        }
+
+        /* ========================================
+           SEÇÃO 3: HISTÓRIA
+           ======================================== */
+        
+        .story-section {
+            background: #0a0a0a;
+            padding: 80px 20px;
+        }
+
+        /* Título das seções */
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            color: #ff4444; /* Rosa/vermelho */
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Grid da história - texto à esquerda, imagem à direita */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+
+        /* Coluna do texto */
+        .story-text {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #cccccc;
+        }
+
+        .story-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Coluna da imagem */
+        .story-image-box {
+            width: 100%;
+            height: auto;
+        }
+
+        .story-image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+            box-shadow: none;
+        }
+
+        /* Texto destacado na história */
+        .highlight {
+            color: #ff4444; /* Rosa/vermelho */
+            font-weight: bold;
+        }
+
+        /* ========================================
+           SEÇÃO 4: DEPOIMENTOS (CARROSSEL)
+           ======================================== */
+        
+        .testimonials-section {
+            background: #0a0a0a;
+            padding: 80px 20px;
+            overflow: hidden;
+        }
+
+        /* Container do carrossel */
+        .testimonials-carousel-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        /* Track do carrossel que se move */
+        .testimonials-carousel {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Cada slide mostra 2 depoimentos */
+        .testimonials-slide {
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 0 10px;
+        }
+
+        /* Card individual de depoimento */
+        .testimonial-card {
+            background: linear-gradient(135deg, #1a0000, #0d0000);
+            border-left: 4px solid #ff4444;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        /* Efeito hover nos cards de depoimento */
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Texto do depoimento */
+        .testimonial-text {
+            font-size: 1.1em;
+            color: #cccccc;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Autor do depoimento */
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Avatar do autor */
+        /* ========================================
+           AVATAR DO DEPOIMENTO
+           ======================================== */
+        
+        /* 
+        INSTRUÇÕES PARA USAR FOTOS:
+        
+        TAMANHO RECOMENDADO DA FOTO:
+        - Largura: 150px
+        - Altura: 150px
+        - Formato: Quadrado (1:1)
+        - Tipo: JPG ou PNG
+        - Peso: Máximo 100KB
+        
+        COMO USAR:
+        
+        OPÇÃO 1 - Com siglas (atual):
+        <div class="testimonial-avatar">RS</div>
+        
+        OPÇÃO 2 - Com foto:
+        <div class="testimonial-avatar">
+            <img src="caminho/para/foto.jpg" alt="Nome da Pessoa">
+        </div>
+        
+        A foto será automaticamente ajustada para circular!
+        */
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff4444, #c41e3a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            overflow: hidden; /* Garante que a imagem não saia do círculo */
+            flex-shrink: 0; /* Impede que o avatar encolha */
+        }
+        
+        /* Estilo para imagens dentro do avatar */
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cobre todo o espaço mantendo proporção */
+            object-position: center; /* Centraliza a imagem */
+            border-radius: 50%;
+        }
+
+        /* Informações do autor */
+        .testimonial-info h4 {
+            color: #ff4444;
+            font-size: 1.2em;
+        }
+
+        .testimonial-info p {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        /* Estrelas de avaliação */
+        .stars {
+            color: #ffd700; /* Dourado */
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        /* Indicadores (dots) do carrossel */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        /* Cada dot individual */
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cccccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Dot ativo (slide atual) */
+        .carousel-dot.active {
+            background: #ff4444;
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        /* ========================================
+           SEÇÃO 5: AVISO (FUNDO BRANCO)
+           ======================================== */
+        
+        .warning-section {
+            background: #ffffff; /* Fundo branco */
+            padding: 80px 20px;
+        }
+
+        /* Grid - imagem à esquerda, texto à direita */
+        .warning-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Coluna da imagem */
+        .warning-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .warning-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Coluna do texto */
+        .warning-content {
+            color: #0a0a0a;
+        }
+
+        /* Título do aviso */
+        .warning-title {
+            font-size: 2.5em;
+            color: #ff4444; /* Vermelho */
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        /* Texto do aviso */
+        .warning-text {
+            font-size: 1.3em;
+            line-height: 1.7;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        /* Texto destacado no aviso */
+        .warning-highlight {
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        /* ========================================
+           SEÇÃO 6: BÔNUS
+           ======================================== */
+        
+        .bonus-section {
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a0000 100%);
+            padding: 80px 20px;
+        }
+
+        /* Grid dos cards de bônus */
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Card individual de bônus */
+        .bonus-card {
+            background: #1a0000;
+            border: 2px solid #ff4444; /* Borda vermelha */
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Espaço para imagem do bônus */
+        .bonus-image {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bonus-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Badge "BÔNUS #1, #2, #3" */
+        .bonus-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ffffff; /* Fundo branco */
+            color: #0a0a0a; /* Texto preto */
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Título do bônus */
+        .bonus-title {
+            font-size: 1.6em;
+            color: #ff4444; /* Rosa/vermelho */
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        /* Valor riscado do bônus */
+        .bonus-value {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin: 15px 0;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        /* Descrição do bônus */
+        .bonus-description {
+            color: #cccccc;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           SEÇÃO 7: PREÇOS
+           ======================================== */
+        
+        .pricing-section {
+            background: #0a0a0a;
+            padding: 80px 20px;
+        }
+
+        /* Grid dos planos */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        /* Card individual de preço */
+        .pricing-card {
+            background: linear-gradient(135deg, #1a0000, #2a0000);
+            border: 3px solid #ff4444;
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Card em destaque (Premium) */
+        .pricing-card.featured {
+            border-color: #ff4444;
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(255, 107, 107, 0.4);
+            position: relative; /* Necessário para posicionar o selo */
+        }
+
+        /* Badge "MAIS VENDIDO" */
+        .pricing-card.featured::before {
+            content: "MAIS VENDIDO";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff4444;
+            color: #ffffff;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        /* ===== SELO DE GARANTIA NO PREMIUM ===== */
+        .guarantee-seal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            z-index: 10;
+        }
+        
+        .guarantee-seal img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        }
+        /* ====================================== */
+
+        /* Título do plano */
+        .pricing-title {
+            font-size: 2em;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Preço do plano */
+        .pricing-price {
+            font-size: 3.5em;
+            color: #ffffff;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        /* Novo formato de preço com parcelamento */
+        .pricing-price-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .price-old {
+            font-size: 1.2em;
+            color: #ff6b6b;
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+        
+        .price-installment {
+            font-size: 1.1em;
+            color: #cccccc;
+            margin-bottom: 5px;
+        }
+        
+        .price-installment-value {
+            font-size: 3.5em;
+            color: #10e513;
+            font-weight: bold;
+            margin: 10px 0;
+            text-shadow: 0 0 10px rgba(16, 229, 19, 0.3);
+        }
+        
+        .price-cash {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-top: 10px;
+        }
+        
+        .price-cash-value {
+            color: #10e513;
+            font-weight: bold;
+        }
+
+        /* Lista de features do plano */
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 15px 0;
+            border-bottom: 1px solid #cccccc;
+            font-size: 1.1em;
+            color: #cccccc;
+        }
+
+        /* Check antes de cada feature */
+        .pricing-features li:before {
+            content: "✓ ";
+            color: #ff4444;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* ========================================
+           SEÇÃO 9: FAQ
+           ======================================== */
+        
+        .faq-section {
+            background: linear-gradient(180deg, #1a0000 0%, #0a0a0a 100%);
+            padding: 80px 20px;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 50px auto;
+        }
+
+        /* Item individual do FAQ */
+        .faq-item {
+            background: #1a0000;
+            border: 2px solid #ff4444;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        /* Pergunta (clicável) */
+        .faq-question {
+            padding: 25px;
+            font-size: 1.3em;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-question:hover {
+            background: #2a0000;
+        }
+
+        /* Resposta (expansível) */
+        .faq-answer {
+            padding: 0 25px 25px;
+            font-size: 1.1em;
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           SEÇÃO 8: CTA FINAL
+           ======================================== */
+        
+        .final-cta-section {
+            background: linear-gradient(135deg, #2a0000, #1a0000);
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 3px solid #ff4444;
+        }
+
+        /* Título final */
+        .final-cta-title {
+            font-size: 3em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Subtítulo final */
+        .final-cta-subtitle {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        /* Destaque verde no subtítulo */
+        .final-cta-subtitle .highlight-green {
+            color: #10e513;
+            font-weight: bold;
+        }
+
+        /* Box do Cronômetro */
+        .countdown-box {
+            background: #000000;
+            border: 3px solid #10e513;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0 0 30px rgba(16, 229, 19, 0.3);
+        }
+        
+        .countdown-label {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .countdown-timer {
+            font-size: 4em;
+            color: #10e513;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            text-shadow: 0 0 20px rgba(16, 229, 19, 0.5);
+        }
+        
+        .countdown-warning {
+            color: #ffd700;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        
+        .countdown-warning::before {
+            content: "⚠️ ";
+        }
+
+        /* Texto de urgência após cronômetro */
+        .urgency-text {
+            font-size: 1.4em;
+            color: #ffffff;
+            margin: 40px 0 20px 0;
+            line-height: 1.6;
+        }
+        
+        /* Texto com preço promocional */
+        .promo-price-text {
+            font-size: 1.6em;
+            color: #10e513;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        /* Box da garantia */
+        .guarantee-box {
+            background: #1a0000;
+            border: 2px solid #ff4444;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        .guarantee-title {
+            font-size: 1.8em;
+            color: #ff4444;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .guarantee-text {
+            font-size: 1.2em;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+        
+        /* Alertas de urgência */
+        .alert-warning {
+            font-size: 1.5em;
+            color: #ff4444;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+        
+        .alert-warning::before {
+            content: "⚠️ ";
+            color: #ffd700;
+        }
+        
+        .alert-info {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        
+        .footer {
+            background: #0a0a0a;
+            padding: 40px 20px;
+            text-align: center;
+            color: #888888;
+            font-size: 0.9em;
+        }
+
+        /* ========================================
+           RESPONSIVIDADE MOBILE (768px ou menos)
+           ======================================== */
+        
+        @media (max-width: 768px) {
+            /* HERO SECTION - Mobile */
+            .top-banner {
+                font-size: 1em;
+                padding: 12px 15px;
+            }
+
+            .hero-section {
+                min-height: auto;
+            }
+
+            .hero-main-content {
+                padding: 30px 20px;
+            }
+
+            .hero-content {
+                display: block;
+            }
+
+            .hero-left {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .hero-right {
+                margin-bottom: 30px;
+            }
+
+            .headline {
+                font-size: 2em; /* Reduzido para mobile */
+                text-align: center;
+            }
+
+            .subheadline {
+                font-size: 1.2em;
+                text-align: center;
+            }
+
+            .hero-image {
+                max-width: 100%;
+            }
+
+            .old-price {
+                font-size: 1.5em;
+            }
+
+            .current-price {
+                font-size: 3.5em; /* Reduzido para mobile */
+            }
+
+            .price-info {
+                font-size: 1.1em;
+            }
+
+            /* Botão menor em mobile */
+            .cta-button {
+                font-size: 1.2em;
+                padding: 12px 35px;
+                max-width: 90%;
+            }
+
+            /* Títulos de seção menores */
+            .section-title {
+                font-size: 2em;
+            }
+
+            /* BENEFÍCIOS - Mobile (1 coluna) */
+            .benefits-container {
+                grid-template-columns: 1fr; /* Uma coluna em mobile */
+                gap: 40px;
+            }
+
+            .benefits-image-box {
+                max-width: 100%;
+            }
+
+            .benefit-item-icon {
+                font-size: 1.5em;
+            }
+
+            .benefit-item-title {
+                font-size: 1.2em;
+            }
+
+            .benefit-item-description {
+                font-size: 0.95em;
+            }
+
+            /* HISTÓRIA - Mobile (1 coluna) */
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .story-text {
+                font-size: 0.95em;
+            }
+
+            .story-text p {
+                margin-bottom: 16px;
+            }
+
+            .story-image-box {
+                max-width: 100%;
+            }
+
+            /* DEPOIMENTOS - Mobile (1 por vez) */
+            .testimonials-slide {
+                grid-template-columns: 1fr; /* Mostra 1 depoimento por vez */
+            }
+
+            /* AVISO - Mobile (1 coluna) */
+            .warning-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .warning-image img {
+                max-width: 100%;
+            }
+
+            .warning-title {
+                font-size: 1.8em;
+            }
+
+            .warning-text {
+                font-size: 1.1em;
+            }
+
+            /* PREÇOS - Mobile (1 coluna) */
+            .pricing-card.featured {
+                transform: scale(1); /* Remove escala em mobile */
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* CTA FINAL - Mobile */
+            .final-cta-title {
+                font-size: 2em;
+            }
+
+            .final-cta-subtitle {
+                font-size: 1.2em;
+            }
+
+            /* SEÇÕES NOVAS - Mobile (DOR, MECANISMO, URGÊNCIA) */
+            .pain-title {
+                font-size: 2em;
+            }
+            
+            .pain-subtitle {
+                font-size: 1.2em;
+            }
+            
+            .pain-container {
+                grid-template-columns: 1fr; /* 1 coluna em mobile */
+            }
+
+            .pain-image {
+                padding-top: 0; /* Remove padding em mobile - imagem volta ao topo */
+            }
+
+            .pain-image-box {
+                max-width: 100%;
+            }
+
+            .pain-item-text {
+                padding-left: 0; /* Remove padding em mobile */
+            }
+            
+            .mechanism-title {
+                font-size: 2em;
+            }
+            
+            .mechanism-subtitle {
+                font-size: 1.1em;
+            }
+            
+            .mechanism-container {
+                grid-template-columns: 1fr; /* 1 coluna em mobile */
+            }
+
+            .mechanism-text-column {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .mechanism-list-column {
+                padding: 30px 20px;
+            }
+            
+            .mechanism-text-long {
+                font-size: 1.05em;
+            }
+            
+            .urgency-title {
+                font-size: 1.8em;
+            }
+            
+            .urgency-text {
+                font-size: 1.1em;
+            }
+            
+            .urgency-timer {
+                font-size: 2em;
+            }
+        }
+
+        /* ========================================
+           ANIMAÇÕES
+           ======================================== */
+        
+        /* Animação de pulsação para botões */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================
+         SEÇÃO 1: HERO (TOPO)
+         ======================================== -->
+    <section class="hero-section">
+        <!-- Faixa vermelha de urgência -->
+        <div class="top-banner">
+  🔥 Desconto só HOJE nessa página🔥
+</div>
+
+        </div>
+        
+        <!-- Conteúdo principal do hero -->
+        <div class="hero-main-content">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Headline e Subheadline -->
+                    <div class="hero-left">
+                        <h1 class="headline">Nunca Mais Ela Irá Ignorar Suas Mensagens</h1>
+<h2 class="subheadline">
+  Tenha acesso a <span style="color: #ffffff; font-weight: bold;">3 MIL MENSAGENS</span> para seduzir mulheres no Tinder, Instagram, Facebook e WhatsApp em poucos minutos de conversa 
+  <span style="color: white; font-weight: 100;">(Mesmo que Você Seja Tímido, Feio ou Pobre)</span>
+</h2>
+                    </div>
+                    
+                    <!-- Imagem principal -->
+                    <div class="hero-right">
+                        <div class="hero-image">
+                            <img src="./img/textos.png" alt="Mensagens que Atraem" style="width: 100%; height: 100%; display: block;">
+                        </div>
+                    </div>
+
+                    <!-- Preço e CTA -->
+                    <div class="hero-cta-section">
+                        <div class="price-box">
+                            <p class="old-price">De R$ 197,00</p>
+                            <p class="current-price">R$ 19,00</p>
+                            <p class="price-info">Oferta por tempo limitado!</p>
+                        </div>
+
+                        <!-- Botão removido - usuário verá os planos mais abaixo -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO 2: BENEFÍCIOS
+         ======================================== -->
+
+    <!-- ========================================
+         SEÇÃO 1.5: DOR - O QUE VOCÊ ESTÁ PERDENDO
+         ======================================== -->
+    <section class="pain-section">
+        <div class="container">
+            <h2 class="pain-title">⚠️ ATENÇÃO: Enquanto Você Não Age...</h2>
+            <p class="pain-subtitle">Outros homens estão usando as mensagens certas e conseguindo o que você tanto deseja. Veja o que você PERDE a cada dia que passa sem saber o que falar:</p>
+            
+            <div class="pain-container">
+                <!-- Imagem à esquerda -->
+                <div class="pain-image">
+                    <div class="pain-image-box">
+                        <!-- Substitua pelo URL real da sua imagem -->
+                        <img src="./img/n1.png" alt="Homem frustrado com mensagens" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22600%22%3E%3Crect fill=%22%231a0000%22 width=%22500%22 height=%22600%22/%3E%3Ctext fill=%22%23ff0000%22 font-size=%2224%22 font-weight=%22bold%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E%E2%9A%A0%EF%B8%8F%20ATEN%C3%87%C3%83O%3C/text%3E%3Ctext fill=%22%23ffffff%22 font-size=%2218%22 x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22%3EVoc%C3%AA est%C3%A1 perdendo%3C/text%3E%3Ctext fill=%22%23ffffff%22 font-size=%2218%22 x=%2250%25%22 y=%2265%25%22 text-anchor=%22middle%22%3Eoportunidades...%3C/text%3E%3C/svg%3E'">
+                    </div>
+                </div>
+
+                <!-- Lista à direita -->
+                <div class="pain-list">
+                    <ul style="list-style: none; padding: 0;">
+                        
+                        <!-- DOR 1 -->
+                        <li class="pain-list-item">
+                            <div class="pain-item-header">
+                                <span class="pain-item-icon">😔</span>
+                                <h3 class="pain-item-title">Perde Oportunidades Todos os Dias</h3>
+                            </div>
+                            <p class="pain-item-text">Mulheres interessantes passam pela sua vida, você consegue o contato, mas TRAVA na hora de mandar mensagem. Ela espera... e acaba conhecendo outro.</p>
+                        </li>
+
+                        <!-- DOR 2 -->
+                        <li class="pain-list-item">
+                            <div class="pain-item-header">
+                                <span class="pain-item-icon">👻</span>
+                                <h3 class="pain-item-title">Continua Levando Vácuo</h3>
+                            </div>
+                            <p class="pain-item-text">Você manda "oi, tudo bem?" e ela só visualiza. Ou responde seco. Enquanto isso, outros homens sabem EXATAMENTE o que falar para manter ela interessada.</p>
+                        </li>
+
+                        <!-- DOR 3 -->
+                        <li class="pain-list-item">
+                            <div class="pain-item-header">
+                                <span class="pain-item-icon">😰</span>
+                                <h3 class="pain-item-title">Vive Na Insegurança e Frustração</h3>
+                            </div>
+                            <p class="pain-item-text">Passa horas pensando no que escrever, apaga, escreve de novo. A ansiedade toma conta. Você SABE que precisa de ajuda, mas continua tentando sozinho.</p>
+                        </li>
+
+                        <!-- DOR 4 -->
+                        <li class="pain-list-item">
+                            <div class="pain-item-header">
+                                <span class="pain-item-icon">💔</span>
+                                <h3 class="pain-item-title">Fica Preso Na Zona de Amigo</h3>
+                            </div>
+                            <p class="pain-item-text">Ela te vê como "amiguinho" porque você não sabe criar ATRAÇÃO através das mensagens. Outros homens chegam depois e conquistam ela na sua frente.</p>
+                        </li>
+
+                        <!-- DOR 5 -->
+                        <li class="pain-list-item">
+                            <div class="pain-item-header">
+                                <span class="pain-item-icon">😤</span>
+                                <h3 class="pain-item-title">Culpa Sua Aparência ou Situação</h3>
+                            </div>
+                            <p class="pain-item-text">Você acha que o problema é ser tímido, feio ou pobre. Mas a verdade é: você só não sabe as PALAVRAS CERTAS. E isso tem solução AGORA.</p>
+                        </li>
+
+                        <!-- DOR 6 -->
+                        <li class="pain-list-item">
+                            <div class="pain-item-header">
+                                <span class="pain-item-icon">⏰</span>
+                                <h3 class="pain-item-title">O Tempo Passa e Nada Muda</h3>
+                            </div>
+                            <p class="pain-item-text">Mais um mês, mais um ano sem resultados. Você vê seus amigos namorando, se divertindo, enquanto você continua sem saber o que fazer. ATÉ QUANDO?</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 1.4em; color: #10e513; font-weight: bold;">Mas calma... Existe uma solução simples para ACABAR com tudo isso HOJE. 👇</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO 1.6: MECANISMO - COMO FUNCIONA
+         ======================================== -->
+    <section class="mechanism-section">
+        <div class="container">
+            <h2 class="mechanism-title">Por Que Você Não Consegue Fazer Ela Te Responder?</h2>
+            <p class="mechanism-subtitle">A verdade que ninguém te conta sobre sedução por mensagens (e como resolver isso HOJE):</p>
+            
+            <div class="mechanism-container">
+                <!-- COLUNA ESQUERDA: Texto Longo -->
+                <div class="mechanism-text-column">
+                    
+                    <p class="mechanism-text-long">
+                        Deixa eu ser <strong>brutalmente honesto</strong> com você: o problema NÃO é sua aparência, seu carro ou sua conta bancária.
+                    </p>
+
+                    <p class="mechanism-text-long">
+                        O verdadeiro problema é que <strong>você não sabe as palavras certas para despertar atração.</strong>
+                    </p>
+
+                    <p class="mechanism-text-long">
+                        Enquanto você pensa por HORAS no que escrever, apaga, reescreve e acaba mandando um "oi, tudo bem?" genérico... outros caras já dominaram a arte de criar <span class="mechanism-highlight-text">atração instantânea</span> através das mensagens.
+                    </p>
+
+                    <p class="mechanism-text-long">
+                        Sabe aquele cara que não é bonito mas sempre consegue a atenção das mulheres? <strong>Ele sabe exatamente o que falar.</strong>
+                    </p>
+
+                    <p class="mechanism-text-long">
+                        E a boa notícia é: <span class="mechanism-highlight-text">isso pode ser aprendido e copiado.</span>
+                    </p>
+
+                    <p class="mechanism-text-long">
+                        Imagina ter na palma da sua mão <strong>3.000 mensagens prontas</strong> que foram testadas milhares de vezes e <strong>COMPROVADAMENTE funcionam</strong> para:
+                    </p>
+
+                    <p class="mechanism-text-long">
+                        ✓ Abrir conversas que fazem ela responder na HORA<br>
+                        ✓ Criar atração sem parecer desesperado<br>
+                        ✓ Manter ela interessada e querendo te conhecer
+                    </p>
+
+                    <p class="mechanism-text-long">
+                        Você não precisa ser engraçado, interessante ou ter "lábia". <strong>Você só precisa copiar e colar as mensagens certas.</strong>
+                    </p>
+
+                    <p class="mechanism-text-long">
+                        É simples assim: <span class="mechanism-highlight-text">COPIE → COLE → RECEBA RESPOSTAS.</span>
+                    </p>
+
+                </div>
+
+                <!-- COLUNA DIREITA: Lista -->
+                <div class="mechanism-list-column">
+                    <h3 class="mechanism-list-title">🔥 O Que Você Vai Conseguir:</h3>
+                    
+                    <ul class="mechanism-list">
+                        <li>Abrir conversas irresistíveis que fazem ela responder na hora</li>
+                        <li>Criar atração instantânea sem parecer carente ou desesperado</li>
+                        <li>Manter ela interessada e engajada na conversa</li>
+                        <li>Fazer ela rir e querer te conhecer pessoalmente</li>
+                        <li>Sair da friendzone e criar tensão sexual</li>
+                        <li>Conseguir o número dela, Instagram ou WhatsApp</li>
+                        <li>Marcar encontros sem ser rejeitado</li>
+                        <li>Funciona no Tinder, Instagram, WhatsApp e Facebook</li>
+                        <li>Não precisa ser bonito, rico ou extrovertido</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA FINAL -->
+            <div style="margin-top: 50px; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 1.5em; font-weight: bold; margin-bottom: 15px; color: #000000;">📱 Pare de Sofrer e Comece a TER RESULTADOS</p>
+                <p style="font-size: 1.2em; color: #000000; margin-bottom: 30px;">3.000 mensagens prontas esperando por você. Basta copiar, colar e ver as respostas chegando.</p>
+                
+                <!-- Botão CTA -->
+                <a href="#precos" class="cta-button pulse">QUERO TER ACESSO AGORA!</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="beneficios" class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Descobrir</h2>
+            <div class="benefits-container">
+                <!-- Imagem à esquerda -->
+                <div class="benefits-image">
+                    <div class="benefits-image-box">
+                        <!-- Substitua pelo URL real da sua imagem -->
+                        <img src="./img/mulher.png" alt="Benefícios - Mensagens que Atraem" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22550%22%3E%3Crect fill=%22%232a0000%22 width=%22500%22 height=%22550%22/%3E%3Ctext fill=%22%23ff6b6b%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImagem dos Benef%C3%ADcios%3C/text%3E%3C/svg%3E'">
+                    </div>
+                </div>
+                
+                <!-- Lista de benefícios à direita -->
+                <div class="benefits-list">
+                    <ul style="list-style: none; padding: 0;">
+                        <!-- Benefício 1 -->
+                        <li class="benefits-list-item">
+                            <div class="benefit-title-wrapper">
+                                <span class="benefit-item-icon"></span>
+                                <h3 class="benefit-item-title">3.000 Mensagens Prontas</h3>
+                            </div>
+                            <p class="benefit-item-description">Um arsenal completo de mensagens testadas e aprovadas para QUALQUER situação: primeira mensagem, puxar assunto, criar atração, marcar encontro e muito mais.</p>
+                        </li>
+
+                        <!-- Benefício 2 -->
+                        <li class="benefits-list-item">
+                            <div class="benefit-title-wrapper">
+                                <span class="benefit-item-icon"></span>
+                                <h3 class="benefit-item-title">Acesso Pelo Celular</h3>
+                            </div>
+                            <p class="benefit-item-description">Tenha todas as mensagens na palma da sua mão. Acesse de qualquer lugar, a qualquer hora. Copie e cole em segundos.</p>
+                        </li>
+
+                        <!-- Benefício 3 -->
+                        <li class="benefits-list-item">
+                            <div class="benefit-title-wrapper">
+                                <span class="benefit-item-icon"></span>
+                                <h3 class="benefit-item-title">Categorizado Por Situação</h3>
+                            </div>
+                            <p class="benefit-item-description">Mensagens organizadas por contexto: Tinder, Instagram, WhatsApp, primeira abordagem, mulher que sumiu, criar desejo e 15+ categorias.</p>
+                        </li>
+
+                        <!-- Benefício 4 -->
+                        <li class="benefits-list-item">
+                            <div class="benefit-title-wrapper">
+                                <span class="benefit-item-icon"></span>
+                                <h3 class="benefit-item-title">Funciona Mesmo Para Tímidos</h3>
+                            </div>
+                            <p class="benefit-item-description">Não precisa ser engraçado, criativo ou confiante. As mensagens fazem TODO o trabalho por você. Basta copiar e colar.</p>
+                        </li>
+
+                        <!-- Benefício 5 -->
+                        <li class="benefits-list-item">
+                            <div class="benefit-title-wrapper">
+                                <span class="benefit-item-icon"></span>
+                                <h3 class="benefit-item-title">Desperta Atração Instantânea</h3>
+                            </div>
+                            <p class="benefit-item-description">Mensagens baseadas em gatilhos psicológicos que fazem ela QUERER responder você e continuar a conversa.</p>
+                        </li>
+
+                        <!-- Benefício 6 -->
+                        <li class="benefits-list-item">
+                            <div class="benefit-title-wrapper">
+                                <span class="benefit-item-icon"></span>
+                                <h3 class="benefit-item-title">Testado e Aprovado</h3>
+                            </div>
+                            <p class="benefit-item-description">Cada mensagem foi testada centenas de vezes em conversas reais. Você recebe apenas o que FUNCIONA de verdade.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO 3: HISTÓRIA
+         ======================================== -->
+    <section class="story-section">
+        <div class="container">
+            <h2 class="section-title">A História de Como Eu Descobri o Segredo das Mensagens Irresistíveis</h2>
+            <div class="story-grid">
+                <!-- Texto à esquerda -->
+                <div class="story-text">
+                    <p>Eu sei exatamente como você se sente agora. Você vê uma mulher interessante, consegue o número dela (ou o Instagram), mas na hora de mandar mensagem... <span class="highlight">travamento total</span>.</p>
+
+                    <p>Você digita algo, apaga, digita de novo, apaga novamente. Demora 30 minutos para enviar um simples "oi, tudo bem?" e quando finalmente envia... ela visualiza e não responde.</p>
+
+                    <p>Eu passei ANOS da minha vida assim. Via meus amigos conquistando mulheres incríveis enquanto eu ficava na zona de amigo ou, pior ainda, era completamente ignorado.</p>
+
+                    <p>Até que um dia eu descobri algo que mudou tudo: <span class="highlight">Não importa sua aparência, conta bancária ou confiança</span>. O que realmente importa são AS PALAVRAS CERTAS no momento certo.</p>
+
+                    <p>Depois de analisar milhares de conversas de sucesso, estudar psicologia feminina e testar cada palavra, cada emoji, cada timing... Eu criei o arsenal definitivo: <span class="highlight">3.000 mensagens prontas para QUALQUER situação</span>.</p>
+
+                    <p>E o melhor? São mensagens que você simplesmente <span class="highlight">COPIA E COLA</span>. Sem precisar ser criativo, engraçado ou ter lábia. Funciona até para os mais tímidos.</p>
+
+                    <p>Agora você tem a chance de ter acesso ao mesmo arsenal que me transformou de um cara invisível em alguém que SEMPRE sabe o que falar.</p>
+                </div>
+                
+                <!-- Imagem à direita -->
+                <div class="story-image">
+                    <div class="story-image-box">
+                        <!-- Substitua pelo URL real da sua imagem -->
+                        <img src="./img/jj.png" alt="História - Do Zero ao Sucesso" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22500%22%3E%3Crect fill=%22%232a0000%22 width=%22500%22 height=%22500%22/%3E%3Ctext fill=%22%23ff6b6b%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EDo Zero ao Sucesso%3C/text%3E%3C/svg%3E'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO 4: DEPOIMENTOS (CARROSSEL)
+         ======================================== -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Veja o Que Outros Homens Estão Dizendo</h2>
+            
+            <div class="testimonials-carousel-container">
+                <!-- Track do carrossel -->
+                <div class="testimonials-carousel" id="testimonialsCarousel">
+                    
+                    <!-- SLIDE 1 - Mostra 2 depoimentos -->
+                    <div class="testimonials-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Cara, eu era PÉSSIMO com mensagens. Demorava horas pra responder e mesmo assim não funcionava. Com essas mensagens prontas, em 2 dias eu já tinha 3 encontros marcados. Funciona DEMAIS!"</p>
+                            <div class="testimonial-author">
+                                <!-- ===== FOTO DE PERFIL 1 ===== 
+                                     Para adicionar foto, substitua "RS" por uma tag <img>
+                                     Exemplo: <img src="caminho/para/foto-rafael.jpg" alt="Rafael S.">
+                                     A foto será automaticamente circular e ajustada
+                                     ============================ -->
+                                <div class="testimonial-avatar">RS</div>
+                                <div class="testimonial-info">
+                                    <h4>Rafael S.</h4>
+                                    <p>São Paulo, SP</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Sempre fui tímido e travava na hora de puxar assunto. Esse arsenal me deu a confiança que eu precisava. Só copio e colo e as respostas vêm naturalmente. Melhor investimento que já fiz!"</p>
+                            <div class="testimonial-author">
+                                <!-- ===== FOTO DE PERFIL 2 ===== 
+                                     Para adicionar foto, substitua "MC" por uma tag <img>
+                                     Exemplo: <img src="caminho/para/foto-marcos.jpg" alt="Marcos C.">
+                                     A foto será automaticamente circular e ajustada
+                                     ============================ -->
+                                <div class="testimonial-avatar">MC</div>
+                                <div class="testimonial-info">
+                                    <h4>Marcos C.</h4>
+                                    <p>Rio de Janeiro, RJ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 - Mostra 2 depoimentos -->
+                    <div class="testimonials-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Eu achava que só funcionava pra cara bonito e rico. Mas testei e vi que não tem nada a ver com isso. As mensagens certas fazem TODA a diferença. Hoje não fico mais sem resposta!"</p>
+                            <div class="testimonial-author">
+                                <!-- ===== FOTO DE PERFIL 3 ===== 
+                                     Para adicionar foto, substitua "TM" por uma tag <img>
+                                     Exemplo: <img src="caminho/para/foto-thiago.jpg" alt="Thiago M.">
+                                     A foto será automaticamente circular e ajustada
+                                     ============================ -->
+                                <div class="testimonial-avatar">TM</div>
+                                <div class="testimonial-info">
+                                    <h4>Thiago M.</h4>
+                                    <p>Belo Horizonte, MG</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Passei anos levando vácuo no Tinder. Depois que comecei a usar essas mensagens, minha taxa de resposta subiu mais de 300%. É surreal como pequenos detalhes fazem diferença."</p>
+                            <div class="testimonial-author">
+                                <!-- ===== FOTO DE PERFIL 4 ===== 
+                                     Para adicionar foto, substitua "LF" por uma tag <img>
+                                     Exemplo: <img src="caminho/para/foto-lucas.jpg" alt="Lucas F.">
+                                     A foto será automaticamente circular e ajustada
+                                     ============================ -->
+                                <div class="testimonial-avatar">LF</div>
+                                <div class="testimonial-info">
+                                    <h4>Lucas F.</h4>
+                                    <p>Curitiba, PR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 - Mostra 2 depoimentos -->
+                    <div class="testimonials-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"O melhor é que tem mensagem pra QUALQUER situação. Desde a primeira mensagem até marcar o encontro. Não fico mais perdido sem saber o que falar. Vale cada centavo!"</p>
+                            <div class="testimonial-author">
+                                <!-- ===== FOTO DE PERFIL 5 ===== 
+                                     Para adicionar foto, substitua "GS" por uma tag <img>
+                                     Exemplo: <img src="caminho/para/foto-guilherme.jpg" alt="Guilherme S.">
+                                     A foto será automaticamente circular e ajustada
+                                     ============================ -->
+                                <div class="testimonial-avatar">GS</div>
+                                <div class="testimonial-info">
+                                    <h4>Guilherme S.</h4>
+                                    <p>Brasília, DF</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Sou introvertido e sempre tive dificuldade. Essas mensagens são um cheat code da vida real! Agora converso com várias mulheres ao mesmo tempo sem esforço. Recomendo demais!"</p>
+                            <div class="testimonial-author">
+                                <!-- ===== FOTO DE PERFIL 6 ===== 
+                                     Para adicionar foto, substitua "BC" por uma tag <img>
+                                     Exemplo: <img src="caminho/para/foto-bruno.jpg" alt="Bruno C.">
+                                     A foto será automaticamente circular e ajustada
+                                     ============================ -->
+                                <div class="testimonial-avatar">BC</div>
+                                <div class="testimonial-info">
+                                    <h4>Bruno C.</h4>
+                                    <p>Fortaleza, CE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Indicadores (dots) do carrossel -->
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO 5: AVISO (FUNDO BRANCO)
+         ======================================== -->
+    <section class="warning-section">
+        <div class="warning-container">
+            <!-- Imagem à esquerda -->
+            <div class="warning-image">
+                <img src="./img/casada1.png" alt="Aviso Importante" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22600%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22500%22 height=%22600%22/%3E%3Ctext fill=%22%23ff0000%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EAviso Importante%3C/text%3E%3C/svg%3E'">
+            </div>
+            
+            <!-- Texto à direita -->
+            <div class="warning-content">
+                <h2 class="warning-title">⚠️ Atenção: Não use com casadas!</h2>
+                <p class="warning-text">Sim, o conhecimento que você vai obter te permitirá seduzir até mesmo mulheres comprometidas.</p>
+                <p class="warning-text">Mas eu peço que use com responsabilidade e não aplique esse conteúdo de maneira errada. <span class="warning-highlight">Fica o aviso.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO 6: BÔNUS
+         ======================================== -->
+    <section id="bonus" class="bonus-section">
+        <div class="container">
+            <h2 class="section-title">Bônus Exclusivos (Por Tempo Limitado)</h2>
+            <div class="bonus-grid">
+                
+                <!-- BÔNUS 1 -->
+                <div class="bonus-card">
+                    <span class="bonus-badge">BÔNUS #1</span>
+                    <div class="bonus-image">
+                        <!-- Substitua pelo URL real da imagem do bônus 1 -->
+                        <img src="./img/bonus11.png" alt="Bônus 1">
+                    </div>
+                    <h3 class="bonus-title">Guia: Como Transformar Match em Encontro</h3>
+                    <p class="bonus-value">R$ 97,00</p>
+                    <p class="bonus-description">Passo a passo completo de como levar a conversa online para um encontro real. Descubra os sinais de que ela está pronta e nunca mais perca uma oportunidade.</p>
+                </div>
+
+                <!-- BÔNUS 2 -->
+                <div class="bonus-card">
+                    <span class="bonus-badge">BÔNUS #2</span>
+                    <div class="bonus-image">
+                        <!-- Substitua pelo URL real da imagem do bônus 2 -->
+                        <img src="./img/bonus22.png" alt="Bônus 2" onerror="this.parentElement.innerHTML='<span style=\'font-size: 3em; color: #ff4444;\'>😂</span>'">
+                    </div>
+                    <h3 class="bonus-title">200 Memes e GIFs que Fazem Ela Rir</h3>
+                    <p class="bonus-value">R$ 47,00</p>
+                    <p class="bonus-description">Coleção exclusiva de memes e GIFs testados para quebrar o gelo, fazer ela rir e manter a conversa fluindo naturalmente.</p>
+                </div>
+
+                <!-- BÔNUS 3 -->
+                <div class="bonus-card">
+                    <span class="bonus-badge">BÔNUS #3</span>
+                    <div class="bonus-image">
+                        <!-- Substitua pelo URL real da imagem do bônus 3 -->
+                        <img src="./img/bonus33.png" alt="Bônus 3" onerror="this.parentElement.innerHTML='<span style=\'font-size: 3em; color: #ff4444;\'>✅</span>'">
+                    </div>
+                    <h3 class="bonus-title">Checklist: Erros Fatais que Espantam Mulheres</h3>
+                    <p class="bonus-value">R$ 67,00</p>
+                    <p class="bonus-description">Lista completa dos 27 erros que 99% dos homens cometem nas mensagens e que fazem elas perderem todo o interesse. Evite-os e se destaque!</p>
+                </div>
+
+            </div>
+
+            <!-- Total dos bônus -->
+            <div style="text-align: center; margin-top: 60px;">
+                <h3 style="font-size: 2.5em; color: #ff4444; margin-bottom: 20px;">Valor Total dos Bônus: R$ 211,00</h3>
+                <p style="font-size: 1.5em; color: #ffffff; margin-bottom: 30px;">Mas hoje você leva GRÁTIS ao garantir seu acesso!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO 7: PREÇOS
+         ======================================== -->
+    <section id="precos" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Escolha Seu Plano</h2>
+            <div class="pricing-grid">
+                
+                <!-- PLANO BÁSICO -->
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Plano Básico</h3>
+                    
+                    <div class="pricing-price-box">
+                        <p class="price-old">DE R$ 197,00</p>
+                        <p class="price-installment">POR APENAS 5X DE</p>
+                        <p class="price-installment-value">R$ 4,21</p>
+                        <p class="price-cash">OU <span class="price-cash-value">R$ 19,00</span> À VISTA</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>3.000 Mensagens Prontas</li>
+                        <li>Acesso por 6 meses</li>
+                       <!-- <li>Mensagens Categorizadas</li>
+                        <li>Atualizações Mensais</li>
+                        <li>Suporte por Email</li>
+                        <li>TODOS os 3 Bônus Inclusos</li>-->
+                    </ul>
+                    <a href="https://checkout.payt.com.br/2daeb34d2c59bcf8b509ef9968544e39" class="cta-button" style="font-size: 1.3em; padding: 18px 40px;">Quero Este Plano</a>
+                </div>
+
+                <!-- PLANO PREMIUM (DESTAQUE) -->
+                <div class="pricing-card featured">
+                    <!-- ===== SELO DE GARANTIA =====
+                         Para adicionar o selo, descomente a linha abaixo e substitua o caminho da imagem
+                         Exemplo: <div class="guarantee-seal"><img src="caminho/para/selo-garantia.png" alt="Garantia 7 Dias"></div>
+                         O selo aparecerá no canto superior direito do card
+                         ============================ -->
+                    <!-- <div class="guarantee-seal"><img src="caminho/para/selo-garantia.png" alt="Garantia 7 Dias"></div> -->
+                    
+                    <h3 class="pricing-title">Plano Premium</h3>
+                    
+                    <div class="pricing-price-box">
+                        <p class="price-old">DE R$ 197,00</p>
+                        <p class="price-installment">POR APENAS 5X DE</p>
+                        <p class="price-installment-value">R$ 8,19</p>
+                        <p class="price-cash">OU <span class="price-cash-value">R$ 37,00</span> À VISTA</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>TUDO do Plano Básico +</li>
+                        <li>4.000 Mensagens Prontas (1.000 extras)</li>
+                        <li>4 horas de AudioBook</li>
+                        <li>Aulas em Vídeos Exclusivas</li>
+                        <li>Mensagens para Encontro Presencial</li>
+                        <li>Como Transformar em Relacionamento</li>
+                        <li>Modelos de Conversas no WhatsApp e Instagram</li>
+                        <li>Bônus Secreto Surpresa</li>
+                        <li>Grupo VIP no Telegram</li>
+                        <li>Suporte Prioritário</li>
+                        <li>Acesso Vitalício</li>
+                        <li>TODOS os 3 Bônus Inclusos</li>
+                    </ul>
+                    <a href="https://checkout.payt.com.br/468d8d1e630641035767370ee149353b" class="cta-button" style="font-size: 1.3em; padding: 18px 40px;">Quero o Plano Premium!</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO 8: CTA FINAL COM CRONÔMETRO
+         ======================================== -->
+    <section id="checkout" class="final-cta-section">
+        <div class="container">
+            <h2 class="final-cta-title">⚡ POR QUE VOCÊ PRECISA AGIR AGORA</h2>
+            
+            <p class="final-cta-subtitle">
+                Cada minuto que passa é uma oportunidade perdida. Enquanto você lê isso, 
+                <span class="highlight-green">outros homens já estão usando essas mensagens</span> 
+                e conquistando mulheres que poderiam ser suas.
+            </p>
+
+            <!-- Box do Cronômetro -->
+            <div class="countdown-box">
+                <p class="countdown-label">Tempo restante para garantir o preço promocional:</p>
+                <div class="countdown-timer" id="countdown">00:15:00</div>
+                <p class="countdown-warning">Após isso, o preço volta para R$ 197,00</p>
+            </div>
+
+            <!-- Texto de urgência -->
+            <p class="urgency-text">
+                Não deixe para amanhã. Amanhã ela já pode estar conversando com outro cara que<br>
+                <strong>SABE</strong> o que falar.
+            </p>
+
+            <!-- Preço promocional -->
+            <p class="promo-price-text">
+                Garanta seu acesso AGORA por apenas R$ 37,00 
+                e comece a ver resultados nas próximas 24 horas.
+            </p>
+
+            <!-- Botão CTA Principal -->
+            <a href="https://checkout.payt.com.br/468d8d1e630641035767370ee149353b" class="cta-button pulse" style="font-size: 1.4em; padding: 18px 50px; margin: 30px 0;">
+                SIM, QUERO TRANSFORMAR<br>MINHA COMUNICAÇÃO AGORA!
+            </a>
+
+            <!-- Alertas finais de urgência -->
+            <p class="alert-warning">Oferta válida apenas para os próximos 100 clientes</p>
+            <p class="alert-info">Após atingir o limite, o preço volta para R$ 197,00</p>
+        </div>
+    </section>
+
+
+    <!-- ========================================
+         SEÇÃO 9: FAQ (PERGUNTAS FREQUENTES)
+         ======================================== -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como recebo acesso ao conteúdo? ▼
+                    </div>
+                    <div class="faq-answer">
+                        Após a confirmação do pagamento, você receberá um email com seu login e senha para acessar a plataforma. O acesso é imediato e funciona em qualquer dispositivo (celular, tablet ou computador).
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Funciona mesmo para homens tímidos? ▼
+                    </div>
+                    <div class="faq-answer">
+                        SIM! Na verdade, foi criado ESPECIALMENTE para homens tímidos. Você não precisa ser criativo, engraçado ou ter lábia. Basta copiar e colar as mensagens prontas. Elas fazem todo o trabalho pesado por você.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Preciso ser bonito ou ter dinheiro? ▼
+                    </div>
+                    <div class="faq-answer">
+                        NÃO! A beleza do método é que ele funciona através das PALAVRAS certas. Não importa sua aparência ou conta bancária. O que importa é saber o que falar no momento certo para despertar atração.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        As mensagens funcionam no WhatsApp, Instagram e Tinder? ▼
+                    </div>
+                    <div class="faq-answer">
+                        Sim! As mensagens estão organizadas por plataforma e situação. Tem mensagens específicas para Instagram, WhatsApp, Tinder, Bumble e até para conversas presenciais. Você terá o que falar em QUALQUER canal.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo leva para ver resultados? ▼
+                    </div>
+                    <div class="faq-answer">
+                        A maioria dos nossos clientes vê resultados nas primeiras 24-48 horas. Alguns conseguem marcar encontros no mesmo dia que começam a usar. Depende apenas de você aplicar as mensagens.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Tem garantia? ▼
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Você tem 7 dias de garantia total. Se por qualquer motivo você não gostar, basta enviar um email e devolvemos 100% do seu dinheiro. Sem perguntas, sem complicação.
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qual a diferença entre o Plano Básico e Premium? ▼
+                    </div>
+                    <div class="faq-answer">
+                        O Plano Básico já é completo com 3.000 mensagens. O Premium adiciona 2.000 mensagens extras, áudios prontos, scripts de ligação, acesso ao grupo VIP e suporte prioritário. Se você quer resultados mais rápidos e conteúdo exclusivo, escolha o Premium.
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Por quanto tempo terei acesso? ▼
+                    </div>
+                    <div class="faq-answer">
+                        O Plano Básico dá acesso por 1 ano com todas as atualizações incluídas. O Plano Premium oferece acesso VITALÍCIO - pague uma vez e tenha acesso para sempre, incluindo todas as futuras atualizações.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER (RODAPÉ)
+         ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Textos que despertam desejos. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px;">Política de Privacidade | Termos de Uso | Contato: suportebrasilvip@gmail.com</p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         JAVASCRIPT (INTERATIVIDADE)
+         ======================================== -->
+    <script>
+        /* ==================================================
+           SMOOTH SCROLL - Rolagem suave para links internos
+           ================================================== */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        /* ==================================================
+           FAQ ACCORDION - Expandir/Recolher perguntas
+           ================================================== */
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                // Fecha todas as respostas primeiro
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                // Abre a resposta clicada se estava fechada
+                if (!isVisible) {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+
+        // Inicia com todas as respostas fechadas
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+
+        /* ==================================================
+           CARROSSEL DE DEPOIMENTOS
+           Rola automaticamente a cada 4 segundos
+           ================================================== */
+        let currentSlide = 0; // Slide atual
+        const carousel = document.getElementById('testimonialsCarousel');
+        const slides = document.querySelectorAll('.testimonials-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const totalSlides = slides.length; // Total de slides
+
+        // Atualiza a posição do carrossel
+        function updateCarousel() {
+            const offset = -currentSlide * 100; // Calcula deslocamento
+            carousel.style.transform = `translateX(${offset}%)`;
+            
+            // Atualiza os dots (indicadores)
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        // Avança para o próximo slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides; // Loop infinito
+            updateCarousel();
+        }
+
+        // Vai para um slide específico (ao clicar no dot)
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Auto-play: avança automaticamente a cada 4 segundos
+        setInterval(nextSlide, 4000);
+
+        /* ==================================================
+           RESPONSIVIDADE DO CARROSSEL
+           Ajusta layout em mobile (1 depoimento) vs desktop (2)
+           ================================================== */
+        function adjustCarouselForMobile() {
+            const isMobile = window.innerWidth <= 768;
+            slides.forEach(slide => {
+                if (isMobile) {
+                    // Mobile: 1 coluna (mostra 1 depoimento por vez)
+                    slide.style.gridTemplateColumns = '1fr';
+                } else {
+                    // Desktop: 2 colunas (mostra 2 depoimentos por vez)
+                    slide.style.gridTemplateColumns = '1fr 1fr';
+                }
+            });
+        }
+
+        // Ajusta no carregamento da página
+        adjustCarouselForMobile();
+
+        // Ajusta quando a janela é redimensionada
+        window.addEventListener('resize', adjustCarouselForMobile);
+
+        /* ==================================================
+           CONTADOR DE URGÊNCIA
+           Cria sensação de escassez com timer de 15 minutos
+           ================================================== */
+        
+        // Define 15 minutos a partir de quando a página carrega
+        let countDownDate = new Date().getTime() + (15 * 60 * 1000);
+
+        // Atualiza o contador a cada 1 segundo
+        let countdownInterval = setInterval(function() {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
+
+            // Calcula horas, minutos e segundos
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Formata com zero à esquerda
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            // Exibe o resultado
+            let countdownElement = document.getElementById("countdown");
+            if (countdownElement) {
+                countdownElement.innerHTML = hours + ":" + minutes + ":" + seconds;
+            }
+
+            // Se o contador terminar, mostra "TEMPO ESGOTADO"
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                if (countdownElement) {
+                    countdownElement.innerHTML = "TEMPO ESGOTADO!";
+                    countdownElement.style.color = "#ff4444";
+                }
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
