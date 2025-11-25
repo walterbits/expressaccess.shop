@@ -3,127 +3,486 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Obrigado</title>
+  <title>Parabéns pela sua compra! - Textos Que Despertam Desejos</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff4444, #c41e3a); /* Gradiente vermelho */
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Header com gradiente */
+    .header {
+      background: linear-gradient(135deg, #cc0000 0%, #8b0000 100%);
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    /* Banner de congratulações */
+    .congrats-banner {
+      background: linear-gradient(135deg, #00c851 0%, #007e33 100%);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .congrats-banner h2 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      animation: pulse 2s infinite;
+    }
+
+    .congrats-banner p {
+      font-size: 20px;
+      opacity: 0.95;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    /* Seção de conteúdo */
+    .content {
+      padding: 40px 30px;
+    }
+
+    .step-section {
+      margin-bottom: 40px;
+    }
+
+    .step-title {
+      background: linear-gradient(135deg, #ff4444, #c41e3a); /* Gradiente vermelho */
+      color: white;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+    }
+
+    .step-content {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 5px solid #ff4444;
+      margin-bottom: 25px;
+    }
+
+    .step-content p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .step-content strong {
+      color: #333;
+      font-size: 19px;
+    }
+
+    /* Ícone de email */
+    .email-icon {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .email-icon img {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Container do vídeo */
+    .video-section {
+      background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+      padding: 40px 30px;
       text-align: center;
     }
 
-    /* Título Principal */
-    header {
-      background-color: #cc0000; /* Altere a cor de fundo se quiser */
-      color: white; /* Cor do texto do título */
-      padding: 20px 0;
-      font-size: 20px; /* ← AUMENTE AQUI O TAMANHO DO TÍTULO PRINCIPAL */
-      font-weight: bold;
-    }
-
-    /* Subtítulo abaixo do título principal */
-    .subheader {
-      background-color: #000000; /* Cor de fundo do subtítulo */
+    .video-section h3 {
       color: white;
-      padding: 10px 0;
-      font-size: 38px; /* ← AUMENTE AQUI O TAMANHO DO SUBTÍTULO */
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
-    /* Bloco principal de conteúdo */
-    .content {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-      font-size: 20px; /* ← AUMENTE AQUI O TAMANHO DO TEXTO CENTRAL */
-      line-height: 1.6;
+    .video-container {
+      position: relative;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      background: #000;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      aspect-ratio: 9 / 16; /* Proporção vertical para Shorts */
     }
 
-    /* Ícone do Gmail */
-    .gmail-icon {
-      width: 100px; /* Pode aumentar o ícone aqui */
-      margin: 40px auto;
-    }
-
-    /* Estilo do botão */
-    .button {
-      background-color: #008000; /* Altere a cor do botão aqui */
-      color: white;
-      padding: 18px 30px;
-      font-size: 20px; /* ← AUMENTE AQUI O TAMANHO DO TEXTO DO BOTÃO */
-      font-weight: bold;
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
+      display: block;
+    }
+
+    /* Alerta de spam */
+    .alert-box {
+      background: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 20px;
       border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      text-decoration: none;
+      margin: 25px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .alert-box p {
+      color: #856404;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* Botão principal */
+    .cta-button {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .btn-primary {
       display: inline-block;
-      margin-top: 30px;
+      background: linear-gradient(135deg, #00c851 0%, #007e33 100%);
+      color: white;
+      padding: 20px 50px;
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 8px 25px rgba(0, 200, 81, 0.4);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    /* Rodapé com e-mail de suporte */
-    .footer {
-      margin-top: 40px;
-      font-size: 16px; /* ← AUMENTE AQUI O TAMANHO DO TEXTO DO RODAPÉ */
-      color: #555555;
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0, 200, 81, 0.5);
     }
 
-    .footer-email {
-      font-weight: bold;
-      color: #333333;
-      margin-top: 5px;
+    .btn-primary:active {
+      transform: translateY(-1px);
     }
 
-    /* Ajustes para celular */
-    @media (max-width: 600px) {
-      .content {
+    /* Divisor estilizado */
+    .divider {
+      text-align: center;
+      margin: 30px 0;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #ddd, transparent);
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    .divider span {
+      background: white;
+      padding: 0 20px;
+      color: #888;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* Rodapé de suporte */
+    .support-footer {
+      background: #f8f9fa;
+      padding: 30px;
+      text-align: center;
+      border-top: 3px solid #ff4444;
+    }
+
+    .support-footer h4 {
+      color: #333;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .support-footer p {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .support-email {
+      color: #ff4444;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .support-email:hover {
+      color: #c41e3a;
+      text-decoration: underline;
+    }
+
+    /* Checklist de passos */
+    .checklist {
+      margin: 25px 0;
+    }
+
+    .checklist-item {
+      background: white;
+      padding: 15px 20px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      border-left: 4px solid #00c851;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 17px;
+      color: #555;
+      display: flex;
+      align-items: center;
+    }
+
+    .checklist-item::before {
+      content: '✓';
+      color: #00c851;
+      font-weight: 700;
+      font-size: 24px;
+      margin-right: 15px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .congrats-banner h2 {
+        font-size: 32px;
+      }
+
+      .congrats-banner p {
         font-size: 18px;
       }
 
-      .button {
-        width: 90%;
+      .container {
+        margin: 20px 15px;
+      }
+
+      .content {
+        padding: 25px 20px;
+      }
+
+      .step-title {
+        font-size: 20px;
+        padding: 12px 20px;
+      }
+
+      .step-content p,
+      .step-content strong {
+        font-size: 16px;
+      }
+
+      .btn-primary {
+        padding: 18px 35px;
         font-size: 18px;
+      }
+
+      .video-section {
+        padding: 30px 20px;
+      }
+
+      .video-section h3 {
+        font-size: 24px;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- TÍTULO PRINCIPAL: Editável -->
-  <header>
-    Textos Que Despertam Desejos
-  </header>
-
-  <!-- SUBTÍTULO: Editável -->
-  <div class="subheader">
-    Parabéns pela compra!
+  <!-- Header -->
+  <div class="header">
+    <h1>✨ Textos Que Despertam Desejos ✨</h1>
   </div>
 
-  <!-- BLOCO DE TEXTO PRINCIPAL: Editável -->
-  <div class="content">
-    Para acessar o conteúdo, acesse a sua caixa de E-mail que você cadastrou na hora da compra.<br><br>
-
-      <!-- ÍCONE DO GMAIL: Você pode trocar a imagem se quiser -->
-     <div style="text-align: center; margin: 10px 0;">
-  <img src="imagens/email.png" alt="email"
-       style="max-width: 180px; width: 90%; height: auto; display: inline-block;">
-</div>
-
-  📩 Verifique se não foi enviado para a caixa de spam.<br><br>
-    ou<br><br>
-    Clique no botão verde abaixo para acessar diretamente.
+  <!-- Banner de Congratulações -->
+  <div class="congrats-banner">
+    <h2>🎉 Parabéns pela sua compra! 🎉</h2>
+    <p>Você está a poucos passos de acessar seu conteúdo exclusivo</p>
   </div>
 
-  <!-- BOTÃO COM LINK PERSONALIZÁVEL: Altere o link em href abaixo -->
-  <a href="https://appsell-software.com/login_app/textos-que-despertam-desejos" class="button">👉 Acessar o Material Agora! CLIQUE AQUI</a>
+  <!-- Container Principal -->
+  <div class="container">
+    <!-- Conteúdo -->
+    <div class="content">
+      <!-- Passo 1 - Acesso Direto -->
+      <div class="step-section">
+        <div class="step-title">
+          🚀 Passo 1: Acesso Direto ao Aplicativo
+        </div>
+        <div class="step-content">
+          <p><strong>Clique no botão verde abaixo para fazer login no aplicativo com suas credenciais:</strong></p>
+          <p>Suas informações de acesso foram enviadas para o e-mail cadastrado na compra.</p>
+        </div>
 
-  <!-- RODAPÉ COM E-MAIL DE SUPORTE: Editável -->
-  <div class="footer">
-    Caso tenha dificuldades com o acesso, basta nos enviar um e-mail para:
-    <div class="footer-email">suportebrasilvip@gmail.com</div>
+        <div class="cta-button">
+          <a href="https://appsell-software.com/login_app/textos-que-despertam-desejos" class="btn-primary" target="_blank">
+            👉 Acessar Aplicativo Agora
+          </a>
+        </div>
+
+        <!-- Alerta sobre tutorial -->
+        <div class="alert-box" style="background: #e3f2fd; border-left: 5px solid #2196F3; margin-top: 25px;">
+          <p style="color: #1565c0;">💡 Não conseguiu acessar? Assista ao tutorial em vídeo abaixo para um passo a passo completo!</p>
+        </div>
+      </div>
+
+      <!-- Divisor -->
+      <div class="divider">
+        <span>OU</span>
+      </div>
+
+      <!-- Passo 2 -->
+      <div class="step-section">
+        <div class="step-title">
+          📧 Passo 2: Verifique seu E-mail
+        </div>
+        <div class="step-content">
+          <p><strong>Enviamos suas credenciais de acesso para o e-mail cadastrado na compra.</strong></p>
+          <p>Por favor, verifique sua caixa de entrada agora mesmo!</p>
+        </div>
+
+        <div class="email-icon">
+          <img src="imagens/email.png" alt="Ícone de E-mail" onerror="this.style.display='none'">
+        </div>
+
+        <!-- Alerta sobre spam -->
+        <div class="alert-box">
+          <p>⚠️ IMPORTANTE: Verifique também sua pasta de SPAM ou PROMOÇÕES!</p>
+        </div>
+      </div>
+
+      <!-- Passo 3 - Checklist -->
+      <div class="step-section">
+        <div class="step-title">
+          ✅ Seu Checklist de Acesso
+        </div>
+        <div class="checklist">
+          <div class="checklist-item">
+            Verifique o e-mail cadastrado na compra
+          </div>
+          <div class="checklist-item">
+            Confira a pasta de SPAM/Promoções
+          </div>
+          <div class="checklist-item">
+            Use suas credenciais para fazer login
+          </div>
+          <div class="checklist-item">
+            Assista ao vídeo tutorial abaixo
+          </div>
+          <div class="checklist-item">
+            Comece a usar o conteúdo exclusivo!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção do Vídeo -->
+    <div class="video-section">
+      <h3>🎬 Vídeo Tutorial: Como Acessar o Aplicativo</h3>
+      <p style="color: white; margin-bottom: 20px; font-size: 18px;">
+        Assista ao vídeo abaixo para um passo a passo completo de como acessar seu conteúdo:
+      </p>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/pHGD2e5fF8g" 
+          title="Tutorial de acesso"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+      </div>
+      <p style="color: white; margin-top: 15px; font-size: 16px; opacity: 0.9;">
+        💡 Dica: Assista em tela cheia para melhor visualização
+      </p>
+    </div>
+
+    <!-- Rodapé de Suporte -->
+    <div class="support-footer">
+      <h4>🆘 Precisa de Ajuda?</h4>
+      <p>Caso tenha qualquer dificuldade para acessar o conteúdo,<br>
+      nossa equipe de suporte está pronta para ajudar!</p>
+      <p style="margin-top: 15px;">
+        <strong>Entre em contato:</strong><br>
+        <a href="mailto:suportebrasilvip@gmail.com" class="support-email">
+          suportebrasilvip@gmail.com
+        </a>
+      </p>
+      <p style="font-size: 16px; color: #888; margin-top: 20px;">
+        Respondemos em até 24 horas úteis
+      </p>
+    </div>
   </div>
 
+  <!-- Rodapé final -->
+  <div style="text-align: center; padding: 20px; color: white;">
+    <p style="font-size: 14px; opacity: 0.8;">
+      © 2025 Textos Que Despertam Desejos - Todos os direitos reservados
+    </p>
+  </div>
 </body>
 </html>
-
