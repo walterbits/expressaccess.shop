@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta Exclusiva - Textos Que Despertam Desejos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(180deg, #dc143c 0%, #8b0000 100%);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: clamp(18px, 4vw, 24px);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .timer-container {
+            background: linear-gradient(180deg, #8b0000 0%, #5c0000 100%);
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .timer-block {
+            text-align: center;
+            color: white;
+        }
+
+        .timer-number {
+            font-size: clamp(60px, 15vw, 120px);
+            font-weight: 700;
+            line-height: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .timer-label {
+            font-size: clamp(14px, 3vw, 18px);
+            margin-top: 8px;
+            font-weight: 400;
+        }
+
+        .content {
+            flex: 1;
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .warning {
+            font-size: clamp(20px, 4vw, 28px);
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .offer-text {
+            font-size: clamp(16px, 3.5vw, 20px);
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .offer-text strong {
+            color: #dc143c;
+            font-weight: 700;
+        }
+
+        .product-offer {
+            font-size: clamp(18px, 4vw, 24px);
+            color: #000;
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+
+        .product-offer::before {
+            content: "🎯";
+            margin-right: 8px;
+        }
+
+        .product-offer strong {
+            color: #dc143c;
+        }
+
+        .cta-button {
+            background: linear-gradient(180deg, #228b22 0%, #006400 100%);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: clamp(16px, 3.5vw, 20px);
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 100, 0, 0.4);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 100, 0, 0.5);
+            background: linear-gradient(180deg, #2ca02c 0%, #007500 100%);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .timer-container {
+                gap: 40px;
+                padding: 30px 20px;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .cta-button {
+                padding: 16px 40px;
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timer-container {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ESPERE, VOCÊ FOI SELECIONADO!</h1>
+    </div>
+
+    <div class="timer-container">
+        <div class="timer-block">
+            <div class="timer-number" id="minutes">01</div>
+            <div class="timer-label">Minutos</div>
+        </div>
+        <div class="timer-block">
+            <div class="timer-number" id="seconds">00</div>
+            <div class="timer-label">Segundos</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 class="warning">NÃO FECHE ESTA PÁGINA!</h2>
+        
+        <p class="offer-text">
+            <strong>Você acaba de desbloquear uma oferta totalmente exclusiva:</strong> algo que você não encontrará em nenhum outro lugar e que está disponível somente para você, neste exato momento.
+        </p>
+
+        <p class="product-offer">
+            Textos Que Despertam Desejos: <strong>de R$97 por apenas R$17!</strong>
+        </p>
+
+        <button class="cta-button" onclick="claimOffer()">
+            QUERO O DESCONTO!
+        </button>
+    </div>
+
+    <script>
+        // Countdown timer - sempre começa com 1 minuto
+        let totalSeconds = 60;
+
+        function updateTimer() {
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            
+            if (totalSeconds > 0) {
+                totalSeconds--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                // Timer ended - you can add action here
+                document.querySelector('.cta-button').style.animation = 'pulse 1s infinite';
+            }
+        }
+
+        // Start timer when page loads
+        window.addEventListener('load', updateTimer);
+
+        function claimOffer() {
+
+             window.location.href = 'https://go.perfectpay.com.br/PPU38CPM9ND';
+        }
+
+        // Add pulse animation for button
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
