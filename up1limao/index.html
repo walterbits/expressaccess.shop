@@ -99,65 +99,6 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.15);
         }
 
-        /* Vertical video aspect ratio (9:16 for mobile/vertical videos) */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 177.78%; /* 16:9 inverted = 9:16 vertical */
-        }
-
-        .video-container video,
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .video-placeholder {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 16px;
-            text-align: center;
-            width: 90%;
-            padding: 20px;
-        }
-
-        .play-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 3px solid white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            cursor: pointer;
-        }
-
-        .play-icon::after {
-            content: '▶';
-            color: white;
-            font-size: 24px;
-            margin-left: 3px;
-        }
-
-        .olha-text {
-            background: rgba(255, 235, 59, 0.9);
-            color: #1A1A1A;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 800;
-            font-size: 16px;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
         /* Footer */
         .footer-text {
             text-align: center;
@@ -227,22 +168,13 @@
 
         <!-- Video Container - VERTICAL FORMAT -->
         <div class="video-container">
-            <div class="video-wrapper">
-                <!-- Placeholder -->
-                <div class="video-placeholder">
-                    <div class="olha-text">OLHA</div>
-                    <div class="play-icon"></div>
-                    <p style="margin-bottom: 10px;">Seu vídeo vertical será exibido aqui</p>
-                    <p style="font-size: 12px; opacity: 0.7;">
-                        Adicione o link do seu vídeo no código HTML
-                    </p>
-                </div>
-                
-                <!-- vturb -->
-                
-                <vturb-smartplayer id="vid-693c359dc33297495ef83fff" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/693c359dc33297495ef83fff/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
-
-            </div>
+            <vturb-smartplayer id="vid-693c359dc33297495ef83fff" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> 
+            <script type="text/javascript"> 
+                var s=document.createElement("script"); 
+                s.src="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/693c359dc33297495ef83fff/v4/player.js"; 
+                s.async=!0;
+                document.head.appendChild(s); 
+            </script>
         </div>
 
         <!-- Footer -->
