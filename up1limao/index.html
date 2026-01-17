@@ -207,17 +207,35 @@
             </script>
         </div>
 
-        <!-- ✅ BOTÃO COM LINK DIRETO DA PERFECTPAY -->
+        <!-- ✅ BOTÃO COM LINK DIRETO DA PERFECTPAY
         <div class="text-center mb-4">
             <a class="main-btn" href="https://go.perfectpay.com.br/PPU38CPMGBS?upsell=true" target="_blank">
                 Obter Acesso!
             </a>
         </div>
+        -->
 
-        <!-- Footer -->
-        <div class="footer-text">
-            Conteúdo exclusivo e confidencial
-        </div>
+<!-- Botão/Link de Declínio (Não, obrigado) -->
+<a href="SUA_URL_DE_DECLINIO_AQUI"
+   class="upsell-decline"
+   aria-label="Não, obrigado. Continuar sem esta oferta.">
+  Não, obrigado
+</a>
+
+<style>
+  .upsell-decline{
+    display:inline-block;
+    margin-top:12px;
+    font: 500 14px/1.2 Arial, sans-serif;
+    color:#6b7280;               /* cinza discreto */
+    text-decoration: underline;  /* estilo “link” */
+    cursor:pointer;
+    padding:8px 10px;
+  }
+  .upsell-decline:hover{
+    color:#374151;               /* um pouco mais escuro no hover */
+  }
+</style>
     </div>
 </body>
 </html>
