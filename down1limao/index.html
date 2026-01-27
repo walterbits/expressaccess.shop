@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oferta Especial</title>
+<meta name="robots" content="noindex,nofollow">
+
+<style>
+  body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#111;
+  }
+
+  /* Barra de progresso do usuário */
+  .top{
+    padding:16px 18px;
+    border-bottom:1px solid #e5e7eb;
+    background:#fff;
+  }
+  .top small{
+    display:flex;
+    justify-content:space-between;
+    color:#6b7280;
+    font-size:13px;
+    margin-bottom:8px;
+  }
+  .progress{
+    width:100%;
+    height:18px; /* MAIS GROSSA */
+    background:#e5e7eb;
+    border-radius:999px;
+    overflow:hidden;
+  }
+  .progress span{
+    display:block;
+    width:80%;
+    height:100%;
+    background:linear-gradient(90deg,#16a34a,#22c55e);
+  }
+
+  .wrap{
+    max-width:680px;
+    margin:0 auto;
+    padding:32px 20px 42px;
+    text-align:center;
+  }
+
+  /* Imagens */
+  .logo{
+    max-width:340px;
+    margin:0 auto 22px;
+  }
+  .logo img{
+    width:100%;
+    display:block;
+  }
+
+  h1{
+    font-size:26px;
+    margin-bottom:12px;
+  }
+
+  p{
+    color:#555;
+    font-size:15px;
+    line-height:1.5;
+    margin-bottom:22px;
+  }
+
+  .priceBox{
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:22px;
+    background:#f9fafb;
+    margin-bottom:26px;
+  }
+
+  .badge{
+    display:inline-block;
+    background:#16a34a;
+    color:#fff;
+    padding:7px 14px;
+    border-radius:999px;
+    font-size:13px;
+    margin-bottom:12px;
+    font-weight:bold;
+  }
+
+  .old{
+    color:#6b7280;
+    text-decoration:line-through;
+    font-size:15px;
+  }
+
+  .new{
+    font-size:40px;
+    font-weight:bold;
+    margin:10px 0 6px;
+  }
+
+  .sub{
+    font-size:13px;
+    color:#6b7280;
+  }
+
+  .btn{
+    width:100%;
+    padding:18px;
+    font-size:18px;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    background:#16a34a;
+    color:#fff;
+    cursor:pointer;
+  }
+  .btn:hover{
+    background:#15803d;
+  }
+
+  .no{
+    display:block;
+    margin-top:16px;
+    color:#6b7280;
+    font-size:14px;
+    text-decoration:none;
+  }
+  .no:hover{
+    text-decoration:underline;
+  }
+
+  .garantia{
+    max-width:200px;
+    margin:28px auto 0;
+  }
+  .garantia img{
+    width:100%;
+    display:block;
+  }
+
+  .foot{
+    margin-top:14px;
+    font-size:12px;
+    color:#6b7280;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- TOPO: PROGRESSO DO USUÁRIO -->
+<div class="top">
+  <small>
+    <span>Você está quase concluindo</span>
+    <strong>80%</strong>
+  </small>
+  <div class="progress">
+    <span></span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- IMAGEM PRINCIPAL -->
+  <div class="logo">
+    <img src="acelerador.png" alt="Acelerador de Resultados">
+  </div>
+
+  <h1>Última chance com <u>50% de desconto</u></h1>
+  <p>
+    Se você estava saindo por causa do valor, essa é a forma mais simples
+    e acessível de continuar agora.
+  </p>
+
+  <!-- BLOCO DE PREÇO -->
+  <div class="priceBox">
+    <div class="badge">DESCONTO DE 50%</div>
+    <div class="old">De R$ 69,00</div>
+    <div class="new">R$ 37,00</div>
+    <div class="sub">Pagamento único • Acesso imediato</div>
+  </div>
+
+  <!-- CTA -->
+  <button class="btn" onclick="window.location.href='https://checkout.perfectpay.com.br/pay/PPU38CQ6KOR?upsell=true'">
+    ACESSAR AGORA
+  </button>
+
+  <a class="no" href="https://expressaccess.shop/obrigado-limao/">
+    Não, obrigado.
+  </a>
+
+  <!-- GARANTIA -->
+  <div class="garantia">
+    <img src="garantia.png" alt="Garantia 30 dias">
+  </div>
+
+  <div class="foot">
+    Compra segura • Garantia de 30 dias
+  </div>
+
+</div>
+
+</body>
+</html>
